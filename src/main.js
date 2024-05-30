@@ -2,8 +2,7 @@ addEventListener("contextmenu", (event) => event.preventDefault());
 addEventListener("mousedown", (ev) => {
 	if (ev.button === 2) return;
 	const mousemove = (event) => {
-		console.clear();
-		console.log(new Date().getMilliseconds());
+		console.log(event);
 	};
 	const stop = () => {
 		removeEventListener("mousemove", mousemove);
